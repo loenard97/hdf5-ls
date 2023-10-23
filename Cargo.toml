@@ -3,11 +3,9 @@ name = "hdf5-ls"
 version = "0.1.0"
 edition = "2021"
 license = "GPL-3.0-only"
-license-file = "LICENSE"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-hdf5 = "0.8.1"
-ndarray = "0.15.6"
-csv = "1.2.1"
+hdf5 = { git = "https://github.com/aldanor/hdf5-rust.git" }  # latest version 0.8.1 does not work with hdf5 1.14.2
+clap = { version = "4.4.6", features = ["derive"] }
